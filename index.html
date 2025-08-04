@@ -49,67 +49,90 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
         }
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .lang-btn.active {
+            background-color: #F28F3B;
+            color: white;
+        }
+        .lang-btn:not(.active) {
+            background-color: transparent;
+            color: #F8F9FA;
+        }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <header class="text-center py-12 px-4 brand-bg-dark text-white">
-        <h1 class="text-4xl md:text-5xl font-black mb-2">Um Guia Visual de Português Europeu</h1>
-        <p class="text-lg md:text-xl max-w-3xl mx-auto brand-text-orange">A sua jornada pelos sons e estruturas de uma bela língua começa aqui.</p>
+    <header class="text-center py-12 px-4 brand-bg-dark text-white relative">
+        <div class="absolute top-4 right-4">
+            <button id="lang-pt" class="lang-btn active">PT</button>
+            <button id="lang-en" class="lang-btn">EN</button>
+        </div>
+        <h1 id="main-title" class="text-4xl md:text-5xl font-black mb-2">Um Guia Visual de Português Europeu</h1>
+        <p id="main-subtitle" class="text-lg md:text-xl max-w-3xl mx-auto brand-text-orange">A sua jornada pelos sons e estruturas de uma bela língua começa aqui.</p>
     </header>
 
     <main class="container mx-auto p-4 md:p-8">
 
         <section id="downloads" class="mb-16">
             <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold brand-text-dark">Materiais da Aula</h2>
-                <p class="mt-2 max-w-2xl mx-auto text-gray-600">Faça o download dos ficheiros PDF e outros materiais de apoio utilizados nas aulas.</p>
+                <h2 id="downloads-title" class="text-3xl font-bold brand-text-dark">Materiais da Aula</h2>
+                <p id="downloads-subtitle" class="mt-2 max-w-2xl mx-auto text-gray-600">Faça o download dos ficheiros PDF e outros materiais de apoio utilizados nas aulas.</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="card text-center">
-                    <h3 class="font-bold text-lg mb-2">Aula 1</h3>
-                    <p class="text-gray-600 text-sm mb-4">Notas gerais da primeira aula.</p>
-                    <a href="European Portuguese - Lesson 1 Notes.pdf" download="European Portuguese - Lesson 1 Notes.pdf" class="inline-block brand-bg-teal text-white font-bold py-2 px-4 rounded-md hover:bg-teal-700 transition-colors duration-300">Download</a>
+                    <h3 id="downloads-card1-title" class="font-bold text-lg mb-2">Aula 1</h3>
+                    <p id="downloads-card1-desc" class="text-gray-600 text-sm mb-4">Notas gerais da primeira aula.</p>
+                    <a href="Aula 1 (1).odt" download="Aula 1 (1).odt" class="inline-block brand-bg-teal text-white font-bold py-2 px-4 rounded-md hover:bg-teal-700 transition-colors duration-300">Download</a>
                 </div>
                 <div class="card text-center">
-                    <h3 class="font-bold text-lg mb-2">Dados Pessoais</h3>
-                    <p class="text-gray-600 text-sm mb-4">Exercícios sobre dados pessoais.</p>
-                    <a href="Exercise Sheet - Dados Pessoais.pdf" download="Exercise Sheet - Dados Pessoais.pdf" class="inline-block brand-bg-teal text-white font-bold py-2 px-4 rounded-md hover:bg-teal-700 transition-colors duration-300">Download</a>
+                    <h3 id="downloads-card2-title" class="font-bold text-lg mb-2">Dados Pessoais</h3>
+                    <p id="downloads-card2-desc" class="text-gray-600 text-sm mb-4">Exercícios sobre dados pessoais.</p>
+                    <a href="Dados-pessoais-1.pdf" download="Dados-pessoais-1.pdf" class="inline-block brand-bg-teal text-white font-bold py-2 px-4 rounded-md hover:bg-teal-700 transition-colors duration-300">Download</a>
                 </div>
-                
                 <div class="card text-center">
-                    <h3 class="font-bold text-lg mb-2">Pastelaria Portuguesa</h3>
-                    <p class="text-gray-600 text-sm mb-4">Listas de doces portugueses.</p>
-                    <a href="Exercise sheet - bola de berlim.pdf" download="Exercise sheet - bola de berlim.pdf" class="inline-block brand-bg-teal text-white font-bold py-2 px-4 rounded-md hover:bg-teal-700 transition-colors duration-300">Download</a>
+                    <h3 id="downloads-card3-title" class="font-bold text-lg mb-2">Numerais Ordinais</h3>
+                    <p id="downloads-card3-desc" class="text-gray-600 text-sm mb-4">Exercícios com números ordinais.</p>
+                    <a href="Os-numerais-ordinais.pdf" download="Os-numerais-ordinais.pdf" class="inline-block brand-bg-teal text-white font-bold py-2 px-4 rounded-md hover:bg-teal-700 transition-colors duration-300">Download</a>
+                </div>
+                <div class="card text-center">
+                    <h3 id="downloads-card4-title" class="font-bold text-lg mb-2">Países e Profissões</h3>
+                    <p id="downloads-card4-desc" class="text-gray-600 text-sm mb-4">Listas de vocabulário.</p>
+                    <a href="PAISES_NACIONALIDADES_E_PROFISSOES_CONTRIES_NACIONALITIES_AND_PROFESSIONS_2_.pdf" download="PAISES_NACIONALIDADES_E_PROFISSOES_CONTRIES_NACIONALITIES_AND_PROFESSIONS_2_.pdf" class="inline-block brand-bg-teal text-white font-bold py-2 px-4 rounded-md hover:bg-teal-700 transition-colors duration-300">Download</a>
                 </div>
             </div>
         </section>
 
         <section id="alphabet" class="mb-16">
             <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold brand-text-teal">Os Blocos de Construção: Pronúncia</h2>
-                <p class="mt-2 max-w-2xl mx-auto text-gray-600">A pronúncia portuguesa tem algumas regras únicas. Compreender estas letras-chave é o primeiro passo para soar como um falante nativo.</p>
+                <h2 id="pronunciation-title" class="text-3xl font-bold brand-text-teal">Os Blocos de Construção: Pronúncia</h2>
+                <p id="pronunciation-subtitle" class="mt-2 max-w-2xl mx-auto text-gray-600">A pronúncia portuguesa tem algumas regras únicas. Compreender estas letras-chave é o primeiro passo para soar como um falante nativo.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card">
                     <h3 class="text-2xl font-bold mb-4">A Letra <span class="brand-text-orange">C</span></h3>
                     <ul class="space-y-3">
-                        <li class="flex items-start"><span class="brand-bg-orange text-white font-bold rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">K</span><span>Antes de 'a', 'o', 'u' soa a 'k'. Ex: <span class="font-semibold">c</span>arro, <span class="font-semibold">c</span>or.</span></li>
-                        <li class="flex items-start"><span class="brand-bg-teal text-white font-bold rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">S</span><span>Antes de 'e', 'i' soa a 's'. Ex: <span class="font-semibold">c</span>enoura, <span class="font-semibold">c</span>idade.</span></li>
-                        <li class="flex items-start"><span class="brand-bg-red text-white font-bold rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">SH</span><span>Como 'ch' soa a 'sh'. Ex: <span class="font-semibold">ch</span>uva.</span></li>
+                        <li class="flex items-start"><span class="brand-bg-orange text-white font-bold rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">K</span><span data-lang-key="c-rule1">Antes de 'a', 'o', 'u' soa a 'k'. Ex: <span class="font-semibold">c</span>arro, <span class="font-semibold">c</span>or.</span></li>
+                        <li class="flex items-start"><span class="brand-bg-teal text-white font-bold rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">S</span><span data-lang-key="c-rule2">Antes de 'e', 'i' soa a 's'. Ex: <span class="font-semibold">c</span>enoura, <span class="font-semibold">c</span>idade.</span></li>
+                        <li class="flex items-start"><span class="brand-bg-red text-white font-bold rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">SH</span><span data-lang-key="c-rule3">Como 'ch' soa a 'sh'. Ex: <span class="font-semibold">ch</span>uva.</span></li>
                     </ul>
                 </div>
                 <div class="card">
                     <h3 class="text-2xl font-bold mb-4">A Letra <span class="brand-text-orange">S</span></h3>
                     <ul class="space-y-3">
-                        <li class="flex items-start"><span class="brand-bg-orange text-white font-bold rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">Z</span><span>Entre duas vogais soa a 'z'. Ex: ca<span class="font-semibold">s</span>a.</span></li>
-                        <li class="flex items-start"><span class="brand-bg-teal text-white font-bold rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">J</span><span>Antes de uma consoante sonora (b, d, g, l, m, n) soa como o 's' em 'pleasure'. Ex: Li<span class="font-semibold">s</span>boa.</span></li>
-                        <li class="flex items-start"><span class="brand-bg-red text-white font-bold rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">SH</span><span>No final de uma palavra ou antes de uma consoante surda (c, f, p, q, t) soa a 'sh'. Ex: me<span class="font-semibold">s</span>a<span class="font-semibold">s</span>, e<span class="font-semibold">s</span>cola.</span></li>
+                        <li class="flex items-start"><span class="brand-bg-orange text-white font-bold rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">Z</span><span data-lang-key="s-rule1">Entre duas vogais soa a 'z'. Ex: ca<span class="font-semibold">s</span>a.</span></li>
+                        <li class="flex items-start"><span class="brand-bg-teal text-white font-bold rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">J</span><span data-lang-key="s-rule2">Antes de uma consoante sonora (b, d, g, l, m, n) soa como o 's' em 'pleasure'. Ex: Li<span class="font-semibold">s</span>boa.</span></li>
+                        <li class="flex items-start"><span class="brand-bg-red text-white font-bold rounded-full w-6 h-6 text-center mr-3 flex-shrink-0">SH</span><span data-lang-key="s-rule3">No final de uma palavra ou antes de uma consoante surda (c, f, p, q, t) soa a 'sh'. Ex: me<span class="font-semibold">s</span>a<span class="font-semibold">s</span>, e<span class="font-semibold">s</span>cola.</span></li>
                     </ul>
                 </div>
                 <div class="card">
                     <h3 class="text-2xl font-bold mb-4">A Letra <span class="brand-text-orange">X</span></h3>
-                    <p class="text-gray-600 mb-4">Esta letra é um camaleão! O seu som muda dependendo da palavra.</p>
+                    <p data-lang-key="x-desc" class="text-gray-600 mb-4">Esta letra é um camaleão! O seu som muda dependendo da palavra.</p>
                     <ul class="space-y-2 text-sm">
                         <li><strong class="brand-text-teal">SH:</strong> pei<span class="font-semibold">x</span>e</li>
                         <li><strong class="brand-text-red">Z:</strong> e<span class="font-semibold">x</span>emplo</li>
@@ -122,68 +145,68 @@
 
         <section id="accents" class="mb-16">
             <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold brand-text-red">A Melodia: Acentos e Vogais</h2>
-                <p class="mt-2 max-w-2xl mx-auto text-gray-600">Os acentos não são apenas para decoração; são vitais para a pronúncia e o significado, alterando o som de uma vogal.</p>
+                <h2 id="accents-title" class="text-3xl font-bold brand-text-red">A Melodia: Acentos e Vogais</h2>
+                <p id="accents-subtitle" class="mt-2 max-w-2xl mx-auto text-gray-600">Os acentos não são apenas para decoração; são vitais para a pronúncia e o significado, alterando o som de uma vogal.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="card text-center">
                     <p class="text-6xl font-black brand-text-orange">´</p>
-                    <h4 class="text-xl font-bold mt-2">Agudo</h4>
-                    <p class="mt-2 text-gray-600">Marca a sílaba tónica e um som de vogal <span class="font-semibold">aberta</span>. Ex: p<span class="font-semibold">é</span>, av<span class="font-semibold">ó</span>.</p>
+                    <h4 id="accent1-title" class="text-xl font-bold mt-2">Agudo</h4>
+                    <p id="accent1-desc" class="mt-2 text-gray-600">Marca a sílaba tónica e um som de vogal <span class="font-semibold">aberta</span>. Ex: p<span class="font-semibold">é</span>, av<span class="font-semibold">ó</span>.</p>
                 </div>
                 <div class="card text-center">
                     <p class="text-6xl font-black brand-text-teal">^</p>
-                    <h4 class="text-xl font-bold mt-2">Circunflexo</h4>
-                    <p class="mt-2 text-gray-600">Marca a sílaba tónica e um som de vogal <span class="font-semibold">fechada</span>. Ex: m<span class="font-semibold">ê</span>s, av<span class="font-semibold">ô</span>.</p>
+                    <h4 id="accent2-title" class="text-xl font-bold mt-2">Circunflexo</h4>
+                    <p id="accent2-desc" class="mt-2 text-gray-600">Marca a sílaba tónica e um som de vogal <span class="font-semibold">fechada</span>. Ex: m<span class="font-semibold">ê</span>s, av<span class="font-semibold">ô</span>.</p>
                 </div>
                 <div class="card text-center">
                     <p class="text-6xl font-black brand-text-red">~</p>
-                    <h4 class="text-xl font-bold mt-2">Til</h4>
-                    <p class="mt-2 text-gray-600">Cria um som <span class="font-semibold">nasal</span>, como se o ar passasse pelo nariz. Ex: p<span class="font-semibold">ã</span>o, m<span class="font-semibold">ã</span>e.</p>
+                    <h4 id="accent3-title" class="text-xl font-bold mt-2">Til</h4>
+                    <p id="accent3-desc" class="mt-2 text-gray-600">Cria um som <span class="font-semibold">nasal</span>, como se o ar passasse pelo nariz. Ex: p<span class="font-semibold">ã</span>o, m<span class="font-semibold">ã</span>e.</p>
                 </div>
                 <div class="card text-center">
                     <p class="text-6xl font-black brand-text-dark">`</p>
-                    <h4 class="text-xl font-bold mt-2">Grave</h4>
-                    <p class="mt-2 text-gray-600">Usado apenas em 'a' para mostrar a contração de dois 'a's (a + a = à). Indica um som <span class="font-semibold">aberto</span>.</p>
+                    <h4 id="accent4-title" class="text-xl font-bold mt-2">Grave</h4>
+                    <p id="accent4-desc" class="mt-2 text-gray-600">Usado apenas em 'a' para mostrar a contração de dois 'a's (a + a = à). Indica um som <span class="font-semibold">aberto</span>.</p>
                 </div>
             </div>
         </section>
         
-        <section id="personal-info" class="mb-16">
+        <section id="personal-info-section" class="mb-16">
             <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold brand-text-orange">Apresentações: Falar Sobre Si</h2>
-                <p class="mt-2 max-w-2xl mx-auto text-gray-600">Aprenda o vocabulário essencial para se apresentar e falar sobre quem é.</p>
+                <h2 id="personal-info-title" class="text-3xl font-bold brand-text-orange">Apresentações: Falar Sobre Si</h2>
+                <p id="personal-info-subtitle" class="mt-2 max-w-2xl mx-auto text-gray-600">Aprenda o vocabulário essencial para se apresentar e falar sobre quem é.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card lg:col-span-2">
-                    <h3 class="text-2xl font-bold mb-4 brand-text-orange">Dados Pessoais</h3>
+                    <h3 id="personal-data-title" class="text-2xl font-bold mb-4 brand-text-orange">Dados Pessoais</h3>
                     <ul class="space-y-4">
-                        <li><strong class="block text-gray-800">Qual é o seu nome?</strong><span class="text-gray-600">O meu nome é... / Eu sou...</span></li>
-                        <li><strong class="block text-gray-800">Quantos anos tem?</strong><span class="text-gray-600">Eu tenho ... anos.</span></li>
-                        <li><strong class="block text-gray-800">Qual é o seu estado civil?</strong><span class="text-gray-600">Sou solteiro(a), casado(a), divorciado(a).</span></li>
-                        <li><strong class="block text-gray-800">De onde é? / Qual é a sua nacionalidade?</strong><span class="text-gray-600">Sou de... / Sou português(a).</span></li>
-                        <li><strong class="block text-gray-800">Qual é a sua profissão?</strong><span class="text-gray-600">Eu sou professor(a).</span></li>
+                        <li><strong data-lang-key="q-name" class="block text-gray-800">Qual é o seu nome?</strong><span data-lang-key="a-name" class="text-gray-600">O meu nome é... / Eu sou...</span></li>
+                        <li><strong data-lang-key="q-age" class="block text-gray-800">Quantos anos tem?</strong><span data-lang-key="a-age" class="text-gray-600">Eu tenho ... anos.</span></li>
+                        <li><strong data-lang-key="q-status" class="block text-gray-800">Qual é o seu estado civil?</strong><span data-lang-key="a-status" class="text-gray-600">Sou solteiro(a), casado(a), divorciado(a).</span></li>
+                        <li><strong data-lang-key="q-origin" class="block text-gray-800">De onde é? / Qual é a sua nacionalidade?</strong><span data-lang-key="a-origin" class="text-gray-600">Sou de... / Sou português(a).</span></li>
+                        <li><strong data-lang-key="q-job" class="block text-gray-800">Qual é a sua profissão?</strong><span data-lang-key="a-job" class="text-gray-600">Eu sou professor(a).</span></li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3 class="text-2xl font-bold mb-4 brand-text-teal">Números Ordinais</h3>
+                    <h3 id="ordinals-title" class="text-2xl font-bold mb-4 brand-text-teal">Números Ordinais</h3>
                     <ul class="space-y-2">
-                        <li><span class="font-bold w-10 inline-block">1º</span> primeiro</li>
-                        <li><span class="font-bold w-10 inline-block">2º</span> segundo</li>
-                        <li><span class="font-bold w-10 inline-block">3º</span> terceiro</li>
-                        <li><span class="font-bold w-10 inline-block">4º</span> quarto</li>
-                        <li><span class="font-bold w-10 inline-block">5º</span> quinto</li>
-                        <li><span class="font-bold w-10 inline-block">6º</span> sexto</li>
-                        <li><span class="font-bold w-10 inline-block">7º</span> sétimo</li>
-                        <li><span class="font-bold w-10 inline-block">8º</span> oitavo</li>
-                        <li><span class="font-bold w-10 inline-block">9º</span> nono</li>
-                        <li><span class="font-bold w-10 inline-block">10º</span> décimo</li>
+                        <li><span class="font-bold w-10 inline-block">1º</span> <span data-lang-key="first">primeiro</span></li>
+                        <li><span class="font-bold w-10 inline-block">2º</span> <span data-lang-key="second">segundo</span></li>
+                        <li><span class="font-bold w-10 inline-block">3º</span> <span data-lang-key="third">terceiro</span></li>
+                        <li><span class="font-bold w-10 inline-block">4º</span> <span data-lang-key="fourth">quarto</span></li>
+                        <li><span class="font-bold w-10 inline-block">5º</span> <span data-lang-key="fifth">quinto</span></li>
+                        <li><span class="font-bold w-10 inline-block">6º</span> <span data-lang-key="sixth">sexto</span></li>
+                        <li><span class="font-bold w-10 inline-block">7º</span> <span data-lang-key="seventh">sétimo</span></li>
+                        <li><span class="font-bold w-10 inline-block">8º</span> <span data-lang-key="eighth">oitavo</span></li>
+                        <li><span class="font-bold w-10 inline-block">9º</span> <span data-lang-key="ninth">nono</span></li>
+                        <li><span class="font-bold w-10 inline-block">10º</span> <span data-lang-key="tenth">décimo</span></li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3 class="text-2xl font-bold mb-4 brand-text-red">Países e Nacionalidades</h3>
+                    <h3 id="countries-title" class="text-2xl font-bold mb-4 brand-text-red">Países e Nacionalidades</h3>
                     <table class="w-full text-left">
-                        <thead><tr class="border-b"><th class="pb-2">País</th><th class="pb-2">Nacionalidade (m/f)</th></tr></thead>
+                        <thead><tr class="border-b"><th data-lang-key="country" class="pb-2">País</th><th data-lang-key="nationality" class="pb-2">Nacionalidade (m/f)</th></tr></thead>
                         <tbody>
                             <tr><td class="py-1">Portugal</td><td class="py-1">português / portuguesa</td></tr>
                             <tr><td class="py-1">Espanha</td><td class="py-1">espanhol / espanhola</td></tr>
@@ -195,7 +218,7 @@
                     </table>
                 </div>
                 <div class="card lg:col-span-2">
-                    <h3 class="text-2xl font-bold mb-4 brand-text-dark">Profissões Comuns</h3>
+                    <h3 id="professions-title" class="text-2xl font-bold mb-4 brand-text-dark">Profissões Comuns</h3>
                     <div class="grid grid-cols-2 gap-x-4">
                         <ul class="space-y-2">
                             <li><span class="font-bold">ator / atriz</span></li>
@@ -216,59 +239,59 @@
 
         <section id="grammar" class="mb-16">
             <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold brand-text-orange">Gramática Essencial: Substantivos e Verbos</h2>
-                <p class="mt-2 max-w-2xl mx-auto text-gray-600">Compreender o género e os dois verbos "ser/estar" é fundamental para construir frases corretas.</p>
+                <h2 id="grammar-title" class="text-3xl font-bold brand-text-orange">Gramática Essencial: Substantivos e Verbos</h2>
+                <p id="grammar-subtitle" class="mt-2 max-w-2xl mx-auto text-gray-600">Compreender o género e os dois verbos "ser/estar" é fundamental para construir frases corretas.</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                 <div class="card">
-                    <h3 class="text-2xl font-bold mb-4 text-center">Distribuição de Género dos Substantivos</h3>
-                     <p class="text-center text-gray-600 mb-4">Em português, cada substantivo é masculino ou feminino. A terminação de uma palavra é muitas vezes uma pista. Este gráfico mostra a tendência geral das terminações.</p>
+                    <h3 id="gender-chart-title" class="text-2xl font-bold mb-4 text-center">Distribuição de Género dos Substantivos</h3>
+                     <p id="gender-chart-desc" class="text-center text-gray-600 mb-4">Em português, cada substantivo é masculino ou feminino. A terminação de uma palavra é muitas vezes uma pista. Este gráfico mostra a tendência geral das terminações.</p>
                     <div class="chart-container">
                         <canvas id="genderChart"></canvas>
                     </div>
                 </div>
                 <div class="card">
-                    <h3 class="text-2xl font-bold mb-4 text-center">Ser vs. Estar</h3>
-                     <p class="text-center text-gray-600 mb-4">Ambos significam "to be", mas não são intercambiáveis. <span class="font-bold brand-text-teal">Ser</span> é para características permanentes, enquanto <span class="font-bold brand-text-orange">Estar</span> é para estados temporários.</p>
+                    <h3 id="ser-estar-title" class="text-2xl font-bold mb-4 text-center">Ser vs. Estar</h3>
+                     <p id="ser-estar-desc" class="text-center text-gray-600 mb-4">Ambos significam "to be", mas não são intercambiáveis. <span class="font-bold brand-text-teal">Ser</span> é para características permanentes, enquanto <span class="font-bold brand-text-orange">Estar</span> é para estados temporários.</p>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="text-center p-4 rounded-lg bg-teal-50">
                             <h4 class="font-bold text-lg brand-text-teal">SER</h4>
-                            <p class="text-sm text-gray-600">(Permanente)</p>
+                            <p data-lang-key="ser-type" class="text-sm text-gray-600">(Permanente)</p>
                             <ul class="text-left mt-2 space-y-1 text-sm list-disc list-inside">
-                                <li>Identidade</li>
-                                <li>Origem</li>
-                                <li>Profissão</li>
-                                <li>Tempo</li>
-                                <li>Características</li>
+                                <li data-lang-key="ser-rule1">Identidade</li>
+                                <li data-lang-key="ser-rule2">Origem</li>
+                                <li data-lang-key="ser-rule3">Profissão</li>
+                                <li data-lang-key="ser-rule4">Tempo</li>
+                                <li data-lang-key="ser-rule5">Características</li>
                             </ul>
                         </div>
                         <div class="text-center p-4 rounded-lg bg-orange-50">
                             <h4 class="font-bold text-lg brand-text-orange">ESTAR</h4>
-                            <p class="text-sm text-gray-600">(Temporário)</p>
+                            <p data-lang-key="estar-type" class="text-sm text-gray-600">(Temporário)</p>
                             <ul class="text-left mt-2 space-y-1 text-sm list-disc list-inside">
-                                <li>Localização</li>
-                                <li>Humor</li>
-                                <li>Condição</li>
-                                <li>Tempo (clima)</li>
-                                <li>Ações</li>
+                                <li data-lang-key="estar-rule1">Localização</li>
+                                <li data-lang-key="estar-rule2">Humor</li>
+                                <li data-lang-key="estar-rule3">Condição</li>
+                                <li data-lang-key="estar-rule4">Tempo (clima)</li>
+                                <li data-lang-key="estar-rule5">Ações</li>
                             </ul>
                         </div>
                     </div>
-                     <p class="text-center text-gray-600 mt-4 text-sm">Exemplo: "Ela <span class="font-bold brand-text-teal">é</span> bonita" (característica). "Ela <span class="font-bold brand-text-orange">está</span> bonita" (estado temporário).</p>
+                     <p id="ser-estar-example" class="text-center text-gray-600 mt-4 text-sm">Exemplo: "Ela <span class="font-bold brand-text-teal">é</span> bonita" (característica). "Ela <span class="font-bold brand-text-orange">está</span> bonita" (estado temporário).</p>
                 </div>
             </div>
         </section>
         
         <section id="conjugation" class="mb-16">
             <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold brand-text-teal">Poder Verbal: Conjugações Regulares</h2>
-                <p class="mt-2 max-w-2xl mx-auto text-gray-600">A maioria dos verbos segue um padrão previsível com base na sua terminação: -ar, -er ou -ir. Aprenda o padrão e poderá conjugar centenas de verbos!</p>
+                <h2 id="conjugation-title" class="text-3xl font-bold brand-text-teal">Poder Verbal: Conjugações Regulares</h2>
+                <p id="conjugation-subtitle" class="mt-2 max-w-2xl mx-auto text-gray-600">A maioria dos verbos segue um padrão previsível com base na sua terminação: -ar, -er ou -ir. Aprenda o padrão e poderá conjugar centenas de verbos!</p>
             </div>
             <div class="card overflow-x-auto">
                 <table class="w-full text-center">
                     <thead>
                         <tr class="border-b-2 border-gray-200">
-                            <th class="p-3 font-bold">Pronome</th>
+                            <th data-lang-key="pronoun" class="p-3 font-bold">Pronome</th>
                             <th class="p-3 font-bold brand-text-orange">-AR (falar)</th>
                             <th class="p-3 font-bold brand-text-teal">-ER (comer)</th>
                             <th class="p-3 font-bold brand-text-red">-IR (partir)</th>
@@ -313,10 +336,155 @@
     </main>
 
     <footer class="brand-bg-dark text-white text-center p-6">
-        <p>Comece hoje a sua aventura na língua portuguesa!</p>
+        <p id="footer-text">Comece hoje a sua aventura na língua portuguesa!</p>
     </footer>
 
     <script>
+        const translations = {
+            pt: {
+                'main-title': 'Um Guia Visual de Português Europeu',
+                'main-subtitle': 'A sua jornada pelos sons e estruturas de uma bela língua começa aqui.',
+                'downloads-title': 'Materiais da Aula',
+                'downloads-subtitle': 'Faça o download dos ficheiros PDF e outros materiais de apoio utilizados nas aulas.',
+                'downloads-card1-title': 'Aula 1',
+                'downloads-card1-desc': 'Notas gerais da primeira aula.',
+                'downloads-card2-title': 'Dados Pessoais',
+                'downloads-card2-desc': 'Exercícios sobre dados pessoais.',
+                'downloads-card3-title': 'Numerais Ordinais',
+                'downloads-card3-desc': 'Exercícios com números ordinais.',
+                'downloads-card4-title': 'Países e Profissões',
+                'downloads-card4-desc': 'Listas de vocabulário.',
+                'pronunciation-title': 'Os Blocos de Construção: Pronúncia',
+                'pronunciation-subtitle': 'A pronúncia portuguesa tem algumas regras únicas. Compreender estas letras-chave é o primeiro passo para soar como um falante nativo.',
+                'c-rule1': "Antes de 'a', 'o', 'u' soa a 'k'. Ex: <span class='font-semibold'>c</span>arro, <span class='font-semibold'>c</span>or.",
+                'c-rule2': "Antes de 'e', 'i' soa a 's'. Ex: <span class='font-semibold'>c</span>enoura, <span class='font-semibold'>c</span>idade.",
+                'c-rule3': "Como 'ch' soa a 'sh'. Ex: <span class='font-semibold'>ch</span>uva.",
+                's-rule1': "Entre duas vogais soa a 'z'. Ex: ca<span class='font-semibold'>s</span>a.",
+                's-rule2': "Antes de uma consoante sonora (b, d, g, l, m, n) soa como o 's' em 'pleasure'. Ex: Li<span class='font-semibold'>s</span>boa.",
+                's-rule3': "No final de uma palavra ou antes de uma consoante surda (c, f, p, q, t) soa a 'sh'. Ex: me<span class='font-semibold'>s</span>a<span class='font-semibold'>s</span>, e<span class='font-semibold'>s</span>cola.",
+                'x-desc': 'Esta letra é um camaleão! O seu som muda dependendo da palavra.',
+                'accents-title': 'A Melodia: Acentos e Vogais',
+                'accents-subtitle': 'Os acentos não são apenas para decoração; são vitais para a pronúncia e o significado, alterando o som de uma vogal.',
+                'accent1-title': 'Agudo',
+                'accent1-desc': "Marca a sílaba tónica e um som de vogal <span class='font-semibold'>aberta</span>. Ex: p<span class='font-semibold'>é</span>, av<span class='font-semibold'>ó</span>.",
+                'accent2-title': 'Circunflexo',
+                'accent2-desc': "Marca a sílaba tónica e um som de vogal <span class='font-semibold'>fechada</span>. Ex: m<span class='font-semibold'>ê</span>s, av<span class='font-semibold'>ô</span>.",
+                'accent3-title': 'Til',
+                'accent3-desc': "Cria um som <span class='font-semibold'>nasal</span>, como se o ar passasse pelo nariz. Ex: p<span class='font-semibold'>ã</span>o, m<span class='font-semibold'>ã</span>e.",
+                'accent4-title': 'Grave',
+                'accent4-desc': "Usado apenas em 'a' para mostrar a contração de dois 'a's (a + a = à). Indica um som <span class='font-semibold'>aberto</span>.",
+                'personal-info-title': 'Apresentações: Falar Sobre Si',
+                'personal-info-subtitle': 'Aprenda o vocabulário essencial para se apresentar e falar sobre quem é.',
+                'personal-data-title': 'Dados Pessoais',
+                'q-name': 'Qual é o seu nome?',
+                'a-name': 'O meu nome é... / Eu sou...',
+                'q-age': 'Quantos anos tem?',
+                'a-age': 'Eu tenho ... anos.',
+                'q-status': 'Qual é o seu estado civil?',
+                'a-status': 'Sou solteiro(a), casado(a), divorciado(a).',
+                'q-origin': 'De onde é? / Qual é a sua nacionalidade?',
+                'a-origin': 'Sou de... / Sou português(a).',
+                'q-job': 'Qual é a sua profissão?',
+                'a-job': 'Eu sou professor(a).',
+                'ordinals-title': 'Números Ordinais',
+                'first': 'primeiro', 'second': 'segundo', 'third': 'terceiro', 'fourth': 'quarto', 'fifth': 'quinto', 'sixth': 'sexto', 'seventh': 'sétimo', 'eighth': 'oitavo', 'ninth': 'nono', 'tenth': 'décimo',
+                'countries-title': 'Países e Nacionalidades',
+                'country': 'País',
+                'nationality': 'Nacionalidade (m/f)',
+                'professions-title': 'Profissões Comuns',
+                'grammar-title': 'Gramática Essencial: Substantivos e Verbos',
+                'grammar-subtitle': 'Compreender o género e os dois verbos "ser/estar" é fundamental para construir frases corretas.',
+                'gender-chart-title': 'Distribuição de Género dos Substantivos',
+                'gender-chart-desc': 'Em português, cada substantivo é masculino ou feminino. A terminação de uma palavra é muitas vezes uma pista. Este gráfico mostra a tendência geral das terminações.',
+                'ser-estar-title': 'Ser vs. Estar',
+                'ser-estar-desc': 'Ambos significam "to be", mas não são intercambiáveis. <span class="font-bold brand-text-teal">Ser</span> é para características permanentes, enquanto <span class="font-bold brand-text-orange">Estar</span> é para estados temporários.',
+                'ser-type': '(Permanente)',
+                'ser-rule1': 'Identidade', 'ser-rule2': 'Origem', 'ser-rule3': 'Profissão', 'ser-rule4': 'Tempo', 'ser-rule5': 'Características',
+                'estar-type': '(Temporário)',
+                'estar-rule1': 'Localização', 'estar-rule2': 'Humor', 'estar-rule3': 'Condição', 'estar-rule4': 'Tempo (clima)', 'estar-rule5': 'Ações',
+                'ser-estar-example': 'Exemplo: "Ela <span class="font-bold brand-text-teal">é</span> bonita" (característica). "Ela <span class="font-bold brand-text-orange">está</span> bonita" (estado temporário).',
+                'conjugation-title': 'Poder Verbal: Conjugações Regulares',
+                'conjugation-subtitle': 'A maioria dos verbos segue um padrão previsível com base na sua terminação: -ar, -er ou -ir. Aprenda o padrão e poderá conjugar centenas de verbos!',
+                'pronoun': 'Pronome',
+                'footer-text': 'Comece hoje a sua aventura na língua portuguesa!',
+                'gender-chart-label1': 'Tipicamente Masculino (-o)',
+                'gender-chart-label2': 'Tipicamente Feminino (-a)',
+                'gender-chart-label3': 'Outras Terminações (ex: -ão, -or, -ista)',
+                'gender-chart-dataset-label': 'Terminações de Substantivos'
+            },
+            en: {
+                'main-title': 'A Visual Guide to European Portuguese',
+                'main-subtitle': 'Your journey into the sounds and structures of a beautiful language begins here.',
+                'downloads-title': 'Class Materials',
+                'downloads-subtitle': 'Download the PDF files and other support materials used in the classes.',
+                'downloads-card1-title': 'Lesson 1',
+                'downloads-card1-desc': 'General notes from the first lesson.',
+                'downloads-card2-title': 'Personal Data',
+                'downloads-card2-desc': 'Exercises about personal data.',
+                'downloads-card3-title': 'Ordinal Numerals',
+                'downloads-card3-desc': 'Exercises with ordinal numbers.',
+                'downloads-card4-title': 'Countries & Professions',
+                'downloads-card4-desc': 'Vocabulary lists.',
+                'pronunciation-title': 'The Building Blocks: Pronunciation',
+                'pronunciation-subtitle': 'Portuguese pronunciation has some unique rules. Understanding these key letters is the first step to sounding like a native speaker.',
+                'c-rule1': "Before 'a', 'o', 'u' it sounds like 'k'. Ex: <span class='font-semibold'>c</span>arro, <span class='font-semibold'>c</span>or.",
+                'c-rule2': "Before 'e', 'i' it sounds like 's'. Ex: <span class='font-semibold'>c</span>enoura, <span class='font-semibold'>c</span>idade.",
+                'c-rule3': "As 'ch' it sounds like 'sh'. Ex: <span class='font-semibold'>ch</span>uva.",
+                's-rule1': "Between two vowels it sounds like 'z'. Ex: ca<span class='font-semibold'>s</span>a.",
+                's-rule2': "Before a voiced consonant (b, d, g, l, m, n) it sounds like the 's' in 'pleasure'. Ex: Li<span class='font-semibold'>s</span>boa.",
+                's-rule3': "At the end of a word or before a voiceless consonant (c, f, p, q, t) it sounds like 'sh'. Ex: me<span class='font-semibold'>s</span>a<span class='font-semibold'>s</span>, e<span class='font-semibold'>s</span>cola.",
+                'x-desc': "This letter is a chameleon! Its sound changes depending on the word.",
+                'accents-title': 'The Melody: Accents & Vowels',
+                'accents-subtitle': "Accents aren't just for decoration; they are vital for pronunciation and meaning, changing how a vowel sounds.",
+                'accent1-title': 'Agudo',
+                'accent1-desc': "Marks the stressed syllable and an <span class='font-semibold'>open</span> vowel sound. Ex: p<span class='font-semibold'>é</span>, av<span class='font-semibold'>ó</span>.",
+                'accent2-title': 'Circunflexo',
+                'accent2-desc': "Marks the stressed syllable and a <span class='font-semibold'>closed</span> vowel sound. Ex: m<span class='font-semibold'>ê</span>s, av<span class='font-semibold'>ô</span>.",
+                'accent3-title': 'Til',
+                'accent3-desc': "Creates a <span class='font-semibold'>nasal</span> sound, as if air is passing through the nose. Ex: p<span class='font-semibold'>ã</span>o, m<span class='font-semibold'>ã</span>e.",
+                'accent4-title': 'Grave',
+                'accent4-desc': "Used only on 'a' to show the contraction of two 'a's (a + a = à). It indicates an <span class='font-semibold'>open</span> sound.",
+                'personal-info-title': 'Introductions: Talking About Yourself',
+                'personal-info-subtitle': 'Learn the essential vocabulary to introduce yourself and talk about who you are.',
+                'personal-data-title': 'Personal Data',
+                'q-name': 'What is your name?',
+                'a-name': 'My name is... / I am...',
+                'q-age': 'How old are you?',
+                'a-age': 'I am ... years old.',
+                'q-status': 'What is your marital status?',
+                'a-status': 'I am single, married, divorced.',
+                'q-origin': 'Where are you from? / What is your nationality?',
+                'a-origin': 'I am from... / I am Portuguese.',
+                'q-job': 'What is your profession?',
+                'a-job': 'I am a teacher.',
+                'ordinals-title': 'Ordinal Numbers',
+                'first': 'first', 'second': 'second', 'third': 'third', 'fourth': 'fourth', 'fifth': 'fifth', 'sixth': 'sixth', 'seventh': 'seventh', 'eighth': 'eighth', 'ninth': 'ninth', 'tenth': 'tenth',
+                'countries-title': 'Countries & Nationalities',
+                'country': 'Country',
+                'nationality': 'Nationality (m/f)',
+                'professions-title': 'Common Professions',
+                'grammar-title': 'Essential Grammar: Nouns & Verbs',
+                'grammar-subtitle': 'Understanding gender and the two "to be" verbs (Ser/Estar) is fundamental to building correct sentences.',
+                'gender-chart-title': 'Noun Gender Distribution',
+                'gender-chart-desc': 'In Portuguese, every noun is either masculine or feminine. The ending of a word is often a clue. This chart shows the general tendency for endings.',
+                'ser-estar-title': 'Ser vs. Estar',
+                'ser-estar-desc': 'Both mean "to be," but they are not interchangeable. <span class="font-bold brand-text-teal">Ser</span> is for permanent traits, while <span class="font-bold brand-text-orange">Estar</span> is for temporary states.',
+                'ser-type': '(Permanent)',
+                'ser-rule1': 'Identity', 'ser-rule2': 'Origin', 'ser-rule3': 'Profession', 'ser-rule4': 'Time', 'ser-rule5': 'Characteristics',
+                'estar-type': '(Temporary)',
+                'estar-rule1': 'Location', 'estar-rule2': 'Mood', 'estar-rule3': 'Condition', 'estar-rule4': 'Weather', 'estar-rule5': 'Actions',
+                'ser-estar-example': 'Example: "Ela <span class="font-bold brand-text-teal">é</span> bonita" (characteristic). "Ela <span class="font-bold brand-text-orange">está</span> bonita" (temporary state).',
+                'conjugation-title': 'Verb Power: Regular Conjugations',
+                'conjugation-subtitle': 'Most verbs follow a predictable pattern based on their ending: -ar, -er, or -ir. Learn the pattern, and you can conjugate hundreds of verbs!',
+                'pronoun': 'Pronoun',
+                'footer-text': 'Start your Portuguese language adventure today!',
+                'gender-chart-label1': 'Typically Masculine (-o)',
+                'gender-chart-label2': 'Typically Feminine (-a)',
+                'gender-chart-label3': 'Other Endings (e.g., -ão, -or, -ista)',
+                'gender-chart-dataset-label': 'Noun Endings'
+            }
+        };
+
         function wrapLabels(label, maxLength) {
             if (typeof label !== 'string' || label.length <= maxLength) {
                 return label;
@@ -337,59 +505,81 @@
             }
             return lines;
         }
-
+        
         const genderChartCtx = document.getElementById('genderChart').getContext('2d');
-        const genderChartData = {
-            labels: [
-                'Tipicamente Masculino (-o)', 
-                'Tipicamente Feminino (-a)', 
-                'Outras Terminações (ex: -ão, -or, -ista)'
-            ].map(label => wrapLabels(label, 16)),
-            datasets: [{
-                label: 'Terminações de Substantivos',
-                data: [45, 45, 10],
-                backgroundColor: [
-                    '#00A6A6',
-                    '#E84855',
-                    '#C5C3C6'
-                ],
-                borderColor: '#FFFFFF',
-                borderWidth: 4
-            }]
-        };
+        let genderChart;
 
-        const genderChart = new Chart(genderChartCtx, {
-            type: 'doughnut',
-            data: genderChartData,
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            font: {
-                                size: 14
-                            }
-                        }
-                    },
-                    tooltip: {
-                        callbacks: {
-                            title: function(tooltipItems) {
-                                const item = tooltipItems[0];
-                                let label = item.chart.data.labels[item.dataIndex];
-                                if (Array.isArray(label)) {
-                                  return label.join(' ');
-                                } else {
-                                  return label;
+        function createOrUpdateChart(lang) {
+            const chartData = {
+                labels: [
+                    translations[lang]['gender-chart-label1'],
+                    translations[lang]['gender-chart-label2'],
+                    translations[lang]['gender-chart-label3']
+                ].map(label => wrapLabels(label, 16)),
+                datasets: [{
+                    label: translations[lang]['gender-chart-dataset-label'],
+                    data: [45, 45, 10],
+                    backgroundColor: ['#00A6A6', '#E84855', '#C5C3C6'],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 4
+                }]
+            };
+
+            if (genderChart) {
+                genderChart.data = chartData;
+                genderChart.update();
+            } else {
+                genderChart = new Chart(genderChartCtx, {
+                    type: 'doughnut',
+                    data: chartData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    font: { size: 14 }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: function(tooltipItems) {
+                                        const item = tooltipItems[0];
+                                        let label = item.chart.data.labels[item.dataIndex];
+                                        return Array.isArray(label) ? label.join(' ') : label;
+                                    }
                                 }
                             }
-                        }
+                        },
+                        cutout: '60%'
                     }
-                },
-                cutout: '60%'
+                });
             }
-        });
+        }
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            const elementsToTranslate = document.querySelectorAll('[id], [data-lang-key]');
+            elementsToTranslate.forEach(el => {
+                const key = el.id || el.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            document.getElementById('lang-pt').classList.toggle('active', lang === 'pt');
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            
+            createOrUpdateChart(lang);
+        }
+
+        document.getElementById('lang-pt').addEventListener('click', () => setLanguage('pt'));
+        document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+
+        // Initial load
+        setLanguage('pt');
+
     </script>
 </body>
 </html>
